@@ -1,5 +1,4 @@
 from django.db import models
-from django.contrib.auth.models import User
 import datetime
 import os
 
@@ -14,7 +13,7 @@ class Catagory(models.Model):
     name=models.CharField(max_length=150,null=False,blank=False)
     image=models.ImageField(upload_to=GetFileName,null=True,blank=True)
     description=models.TextField(max_length=500,null=False,blank=False)
-    status=models.BooleanField(default=False,help_text="0-show,1-Hidden")     
+    status=models.BooleanField(default=False,help_text="0-show,1-Hidden")    
     # created_at=models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
